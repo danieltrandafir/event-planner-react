@@ -8,7 +8,7 @@ export const CreatePlan = () => {
   return (
     <Container maxWidth="lg">
       <Stack>
-        <PageTitle title={"Make Your Plan"} />
+        <PageTitle title={"Make Your Plan!"} />
         <FormPlanner />
       </Stack>
     </Container>
