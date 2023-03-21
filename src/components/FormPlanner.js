@@ -1,50 +1,24 @@
-import Box from "@mui/material/Box";
-import FormControl from '@mui/material/FormControl';
-import Input from '@mui/material/Input';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from "@mui/material/InputAdornment";
-import IconButton from "@mui/material/IconButton";
-import SearchIcon from "@mui/icons-material/Search";
 import TextField from "@mui/material/TextField";
-
+import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 export const FormPlanner = () => {
-    return (
-        <Box
-            component="form"
-            sx={{
-                '& > :not(style)': { m: 1 },
-            }}
-            noValidate
-            autoComplete="off"
-        >
-            <FormControl variant="standard">
-                <InputLabel htmlFor="component-simple">Plan name</InputLabel>
-                <Input id="component-simple" />
-            </FormControl>
-            <FormControl variant="standard">
-                <InputLabel htmlFor="component-simple">Plan date</InputLabel>
-                <Input id="component-simple" />
-            </FormControl>
-            <FormControl variant="standard">
-                <InputLabel htmlFor="component-simple">Location</InputLabel>
-                <Input id="component-simple" />
-            </FormControl>
-            <TextField
-                name="query"
-                placeholder="Add notes"
-                fullWidth
-                InputProps={{
-                    endAdornment: (
-                        <InputAdornment position="end">
-                            <IconButton type="submit">
-                                <SearchIcon />
-                            </IconButton>
-                        </InputAdornment>
-                    ),
-                }}
-            />
+  return (
+    <Container maxWidth="md">
+      <Stack gap={2} component="form" autoComplete="off">
+        <TextField label="Title" name="title" placeholder="Enter plan name" />
 
-        </Box>
-    )
-} 
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <DatePicker label="Pick a date" />
+        </LocalizationProvider>
+
+        <TextField name="location" label="Location" placeholder="Location" />
+
+        <TextField multiline rows={5} name="notes" placeholder="Add notes" />
+      </Stack>
+    </Container>
+  );
+};
