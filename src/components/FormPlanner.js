@@ -32,7 +32,11 @@ export const FormPlanner = () => {
         </LocalizationProvider>
         <TextField name="location" label="Location" placeholder="Location" />
         <TextField multiline rows={5} name="notes" placeholder="Add notes" />
-        <Button variant="contained" endIcon={<SendIcon />}>
+        <Button
+          sx={{ marginBottom: "30px" }}
+          variant="contained"
+          endIcon={<SendIcon />}
+        >
           Create Plan
         </Button>
       </Stack>
