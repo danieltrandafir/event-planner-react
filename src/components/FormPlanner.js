@@ -15,7 +15,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { Typography } from "@mui/material";
 
-export const FormPlanner = () => {
+export const FormPlanner = ({ addPlan }) => {
   const [value, setValue] = React.useState(null);
 
   const initialValues = {
@@ -51,7 +51,7 @@ export const FormPlanner = () => {
       location,
       notes,
     };
-    console.log(myPlan);
+    addPlan(myPlan);
   };
 
   const formik = useFormik({
