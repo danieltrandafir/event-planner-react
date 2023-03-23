@@ -16,43 +16,44 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { Typography } from "@mui/material";
 
 export const FormPlanner = () => {
-  const [plan, setPlan] = useState([]);
-  // state for date picker
   const [value, setValue] = React.useState(null);
-  // Add the initial values
+
   const initialValues = {
-    // Organizers iniial values
     name: "",
     surname: "",
     email: "",
     // Plan details initial values
     title: "",
-    // date: "",
+    date: "",
     location: "",
     notes: "",
   };
 
-  // Add the validation-schema
   const validationSchema = Yup.object({
-    // Organizers validation schema
-    name: Yup.string().required("Please enter your name."),
+    name: Yup.string().required("Please enter a valid product"),
     surname: Yup.string().required("Please enter your surname."),
     email: Yup.string()
       .required("Please enter an email address.")
       .email("Please enter a valid email address."),
-    // Plan details validation schema
-    title: Yup.string(),
-    date: Yup.number().required("Please choose a date"),
+    title: Yup.string().required("Please name you plan"),
+    date: Yup.date(),
     location: Yup.string().required("Please enter a location."),
     notes: Yup.string().max(200, "Minimum character count is 100."),
   });
 
-  // Add on submit call back funcation
   const onSubmit = ({ name, surname, email, title, date, location, notes }) => {
-    console.log("submitted");
+    const myPlan = {
+      name,
+      surname,
+      email,
+      title,
+      date,
+      location,
+      notes,
+    };
+    console.log(myPlan);
   };
 
-  // Use formic hoock
   const formik = useFormik({
     initialValues,
     validationSchema,
@@ -60,21 +61,16 @@ export const FormPlanner = () => {
   });
 
   return (
-    <Container maxWidth="md">
-      <Stack
-        gap={2}
-        component="form"
-        autoComplete="off"
-        onSubmit={formik.handleSubmit}
-      >
+    <Container sx={{ my: 3 }} component="form" onSubmit={formik.handleSubmit}>
+      <Stack>
         <Typography textAlign={"center"} variant="h4">
           Organizer
         </Typography>
-
         <TextField
-          name="name"
           label="Name"
-          placeholder="Name"
+          name="name"
+          placeholder="Enter product name"
+          fullWidth
           value={formik.values.name}
           error={!!formik.errors.name}
           helperText={formik.errors.name}
@@ -118,6 +114,10 @@ export const FormPlanner = () => {
             <DatePicker
               value={value}
               onChange={(newValue) => setValue(newValue)}
+              // value={formik.values.date}
+              error={!!formik.errors.date}
+              helperText={formik.errors.date}
+              // onChange={formik.handleChange}
             />
           </DemoContainer>
         </LocalizationProvider>

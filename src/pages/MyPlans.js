@@ -1,3 +1,9 @@
+import { PlanCard } from "../components/PlanCard";
+
 export const MyPlans = () => {
-  return <div>MyPlans</div>;
+  return (
+    <div>
+      <PlanCard />
+    </div>
+  );
 };
