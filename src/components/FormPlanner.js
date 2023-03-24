@@ -43,6 +43,7 @@ export const FormPlanner = ({ addPlan }) => {
 
   const onSubmit = ({ name, surname, email, title, date, location, notes }) => {
     const myPlan = {
+      id: uuidv4(),
       name,
       surname,
       email,
@@ -51,6 +52,7 @@ export const FormPlanner = ({ addPlan }) => {
       location,
       notes,
     };
+    // console.log(myPlan);
     addPlan(myPlan);
   };
 
@@ -61,8 +63,13 @@ export const FormPlanner = ({ addPlan }) => {
   });
 
   return (
-    <Container sx={{ my: 3 }} component="form" onSubmit={formik.handleSubmit}>
-      <Stack>
+    <Container
+      maxWidth="md"
+      sx={{ my: 3 }}
+      component="form"
+      onSubmit={formik.handleSubmit}
+    >
+      <Stack gap={2}>
         <Typography textAlign={"center"} variant="h4">
           Organizer
         </Typography>
@@ -94,6 +101,7 @@ export const FormPlanner = ({ addPlan }) => {
           helperText={formik.errors.email}
           onChange={formik.handleChange}
         />
+
         {/* <Divider sx={{ margin: "10px" }} /> */}
 
         <Typography textAlign={"center"} variant="h4">

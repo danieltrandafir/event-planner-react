@@ -20,7 +20,7 @@ export const CreatePlan = () => {
 
     plansFromLS.push(plan);
 
-    localStorage.setItem("plans", JSON.stringify(plansFromLS));
+    localStorage.setItem("plans", JSON.stringify("plan", plansFromLS));
 
     setPlans(plansFromLS);
   };
