@@ -54,7 +54,7 @@ export const Home = () => {
         direction={"row"}
         sx={{ justifyContent: "center" }}
       >
-        <Card sx={{ maxWidth: 320, textAlign: "center" }}>
+        <Card sx={{ maxWidth: 250, textAlign: "center" }}>
           <CardMedia
             sx={{ height: 140 }}
             image="../images/jazmin-quaynor-18mUXUS8ksI-unsplash.jpg"
@@ -82,7 +82,7 @@ export const Home = () => {
             <Button size="small">Learn More</Button>
           </CardActions>
         </Card>
-        <Card sx={{ maxWidth: 320, textAlign: "center" }}>
+        <Card sx={{ maxWidth: 250, textAlign: "center" }}>
           <CardMedia
             sx={{ height: 140 }}
             image="../images/jazmin-quaynor-18mUXUS8ksI-unsplash.jpg"

@@ -94,8 +94,8 @@ export const NavBar = () => {
           </ListItem>
         </List>
       </Drawer>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters sx={{}}>
+      <Container maxWidth="xl" sx={{ backgroundColor: "#16213E" }}>
+        <Toolbar disableGutters>
           <Box
             sx={{
               flexGrow: 0,
@@ -116,7 +116,11 @@ export const NavBar = () => {
             </IconButton>
           </Box>
           <Box margin={"auto"}>
-            <Typography variant="h4" component={"h1"}>
+            <Typography
+              variant="h4"
+              component={"h1"}
+              sx={{ fontFamily: "Alkatra, cursive", fontSize: "36px" }}
+            >
               MAAD Events
             </Typography>
           </Box>
@@ -131,8 +135,8 @@ export const NavBar = () => {
             <Button
               variant="contained"
               sx={{
-                backgroundColor: "#0A2647",
-                my: 2,
+                padding: "0 40px",
+                backgroundColor: "#3C415C",
                 color: "white",
                 display: "block",
               }}
