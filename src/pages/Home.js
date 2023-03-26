@@ -13,6 +13,10 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItem from "@mui/material/ListItem";
 
 import HomeBackground from "../images/lauren-mancke-aOC7TSLb1o8-unsplash.jpg";
+import CreateEventImage from "../images/appointment-agenda-reminder-personal-organizer-calendar-concept.jpeg"
+import SearchEvents from "../images/close-up-recording-video-with-smartphone-during-concert.jpeg"
+import MyPlans from "../images/fashionable-african-american-bearded-male-sitting-near-coffee-shop-with-cup-coffee-using-smartphone.jpeg"
+import { margin } from "@mui/system";
 
 const styles = {
   homeContainer: {
@@ -40,12 +44,21 @@ export const Home = () => {
           sx={{
             color: "#fff",
             textAlign: "center",
-            fontSize: "28px",
+            fontSize: "3.5rem",
+          }}
+        >
+          CREATE YOUR PLAN
+        </Typography>
+        <Typography
+          pt={1}
+          sx={{
+            color: "#fff",
+            textAlign: "center",
+            fontSize: "2rem",
             fontWeight: "600",
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt.
+          & DISCOVER NEW EVENTS
         </Typography>
       </Box>
       <Stack
@@ -57,7 +70,7 @@ export const Home = () => {
         <Card sx={{ maxWidth: 250, textAlign: "center" }}>
           <CardMedia
             sx={{ height: 140 }}
-            image="../images/jazmin-quaynor-18mUXUS8ksI-unsplash.jpg"
+            image={CreateEventImage}
             title="green iguana"
           />
           <CardContent>
@@ -68,24 +81,22 @@ export const Home = () => {
                     navigate("/create-plan");
                   }}
                 >
-                  <ListItemText primary="Create plan" />
+                  <ListItemText primary="CREATE PLAN" sx={{ textAlign: "center" }} />
                 </ListItemButton>
               </ListItem>
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt.
+              Now you can use MAAD Events to create your own plan and share it with your frinds and family.
             </Typography>
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}>
-            <Button size="small">Share</Button>
-            <Button size="small">Learn More</Button>
+            <Button size="small">Create your plan</Button>
           </CardActions>
         </Card>
         <Card sx={{ maxWidth: 250, textAlign: "center" }}>
           <CardMedia
             sx={{ height: 140 }}
-            image="../images/jazmin-quaynor-18mUXUS8ksI-unsplash.jpg"
+            image={SearchEvents}
             title="green iguana"
           />
           <CardContent>
@@ -96,21 +107,45 @@ export const Home = () => {
                     navigate("/create-plan");
                   }}
                 >
-                  <ListItemText primary="Create plan" />
+                  <ListItemText primary="SEARCH EVENTS" sx={{ textAlign: "center" }} />
                 </ListItemButton>
               </ListItem>
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt.
+              Now, with our app you can discover all upcoming events that you love.
             </Typography>
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}>
-            <Button size="small">Share</Button>
-            <Button size="small">Learn More</Button>
+            <Button size="small">Discover new events</Button>
+          </CardActions>
+        </Card>
+        <Card sx={{ maxWidth: 250, textAlign: "center" }}>
+          <CardMedia
+            sx={{ height: 140 }}
+            image={MyPlans}
+            title="green iguana"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              <ListItem disablePadding>
+                <ListItemButton
+                  onClick={() => {
+                    navigate("/create-plan");
+                  }}
+                >
+                  <ListItemText primary="MY PLANS" sx={{ textAlign: "center" }} />
+                </ListItemButton>
+              </ListItem>
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Check all your favourt events in your pocket and manage your future plans
+            </Typography>
+          </CardContent>
+          <CardActions sx={{ justifyContent: "center" }}>
+            <Button size="small">Saved plans</Button>
           </CardActions>
         </Card>
       </Stack>
-    </Container>
+    </Container >
   );
 };
