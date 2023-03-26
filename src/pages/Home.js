@@ -6,16 +6,17 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
+import { Routes, Route } from "react-router-dom";
 
 import { useNavigate } from "react-router-dom";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import ListItem from "@mui/material/ListItem";
 
-import HomeBackground from "../images/lauren-mancke-aOC7TSLb1o8-unsplash.jpg";
-import CreateEventImage from "../images/appointment-agenda-reminder-personal-organizer-calendar-concept.jpeg"
+import HomeBackground from "../images/crowd-of-people-orange.jpg";
+import CreateEventImage from "../images/2type-computer.jpg"
 import SearchEvents from "../images/close-up-recording-video-with-smartphone-during-concert.jpeg"
-import MyPlans from "../images/fashionable-african-american-bearded-male-sitting-near-coffee-shop-with-cup-coffee-using-smartphone.jpeg"
+import MyPlans from "../images/looking-at-phone.jpg"
 import { margin } from "@mui/system";
 
 const styles = {
@@ -42,23 +43,23 @@ export const Home = () => {
         <Typography
           pt={1}
           sx={{
-            color: "#fff",
+            color: "#3c3b78",
             textAlign: "center",
             fontSize: "3.5rem",
           }}
         >
-          CREATE YOUR PLAN
+          Organise and Map Your Itineraries In Our Free Event-Planning App 
         </Typography>
         <Typography
           pt={1}
           sx={{
-            color: "#fff",
+            color: "#3c3b78",
             textAlign: "center",
             fontSize: "2rem",
             fontWeight: "600",
           }}
         >
-          & DISCOVER NEW EVENTS
+          Want to explore something new? Discover new events below
         </Typography>
       </Box>
       <Stack
@@ -74,7 +75,7 @@ export const Home = () => {
             title="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h5" component="div" color="#c94b10">
               <ListItem disablePadding>
                 <ListItemButton
                   onClick={() => {
@@ -85,8 +86,8 @@ export const Home = () => {
                 </ListItemButton>
               </ListItem>
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Now you can use MAAD Events to create your own plan and share it with your frinds and family.
+            <Typography variant="body2" color="#3c3b78">
+              Create Your Own Itinerary And Share With Other Attendees 
             </Typography>
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}>
@@ -100,7 +101,7 @@ export const Home = () => {
             title="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h5" component="div" color="#c94b10">
               <ListItem disablePadding>
                 <ListItemButton
                   onClick={() => {
@@ -111,8 +112,8 @@ export const Home = () => {
                 </ListItemButton>
               </ListItem>
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Now, with our app you can discover all upcoming events that you love.
+            <Typography variant="body2" color="#3c3b78">
+              Discover New And Upcoming Events All Over The World! 
             </Typography>
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}>
@@ -126,7 +127,7 @@ export const Home = () => {
             title="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h5" component="div" color="#c94b10">
               <ListItem disablePadding>
                 <ListItemButton
                   onClick={() => {
@@ -137,8 +138,8 @@ export const Home = () => {
                 </ListItemButton>
               </ListItem>
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Check all your favourt events in your pocket and manage your future plans
+            <Typography variant="body2" color="#3c3b78">
+              Keep, Review, and Manage Your Plans
             </Typography>
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}>

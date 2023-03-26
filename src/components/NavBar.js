@@ -94,7 +94,7 @@ export const NavBar = () => {
           </ListItem>
         </List>
       </Drawer>
-      <Container maxWidth="xl" sx={{ backgroundColor: "#16213E" }}>
+      <Container maxWidth="xl" sx={{ backgroundColor: "#3c3b78" }}>
         <Toolbar disableGutters>
           <Box
             sx={{
