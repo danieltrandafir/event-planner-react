@@ -136,7 +136,7 @@ export const NavBar = () => {
               variant="contained"
               sx={{
                 padding: "0 40px",
-                backgroundColor: "#3C415C",
+                backgroundColor: "#ed6d42",
                 color: "white",
                 display: "block",
               }}

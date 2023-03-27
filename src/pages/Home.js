@@ -23,7 +23,7 @@ const styles = {
   homeContainer: {
     backgroundImage: `url(${HomeBackground})`,
     backgroundSize: "cover",
-    height: "100vh",
+    height: "100%vh",
     margin: 0,
     paddingTop: "50px",
     maxWidth: "100%",
@@ -38,14 +38,15 @@ export const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <Container style={styles.homeContainer}>
+    <Container style={styles.homeContainer} sx={{ maxWidth: 250, textAlign: "center" }}>
       <Box style={styles.banner}>
         <Typography
           pt={1}
           sx={{
             color: "#3c3b78",
             textAlign: "center",
-            fontSize: "3.5rem",
+            fontSize: "3rem",
+            fontWeight: "600",
           }}
         >
           Organise and Map Your Itineraries In Our Free Event-Planning App 
