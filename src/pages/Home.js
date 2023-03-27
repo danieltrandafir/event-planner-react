@@ -14,9 +14,9 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItem from "@mui/material/ListItem";
 
 import HomeBackground from "../images/crowd-of-people-orange.jpg";
-import CreateEventImage from "../images/2type-computer.jpg"
-import SearchEvents from "../images/close-up-recording-video-with-smartphone-during-concert.jpeg"
-import MyPlans from "../images/looking-at-phone.jpg"
+import CreateEventImage from "../images/2type-computer.jpg";
+import SearchEvents from "../images/close-up-recording-video-with-smartphone-during-concert.jpeg";
+import MyPlans from "../images/looking-at-phone.jpg";
 import { margin } from "@mui/system";
 
 const styles = {
@@ -49,7 +49,7 @@ export const Home = () => {
             fontWeight: "600",
           }}
         >
-          Organise and Map Your Itineraries In Our Free Event-Planning App 
+          Organise and Map Your Itineraries In Our Free Event-Planning App
         </Typography>
         <Typography
           pt={1}
@@ -76,19 +76,27 @@ export const Home = () => {
             title="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div" color="#c94b10">
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              color="#c94b10"
+            >
               <ListItem disablePadding>
                 <ListItemButton
                   onClick={() => {
                     navigate("/create-plan");
                   }}
                 >
-                  <ListItemText primary="CREATE PLAN" sx={{ textAlign: "center" }} />
+                  <ListItemText
+                    primary="CREATE PLAN"
+                    sx={{ textAlign: "center" }}
+                  />
                 </ListItemButton>
               </ListItem>
             </Typography>
             <Typography variant="body2" color="#3c3b78">
-              Create Your Own Itinerary And Share With Other Attendees 
+              Create Your Own Itinerary And Share With Other Attendees
             </Typography>
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}>
@@ -102,19 +110,27 @@ export const Home = () => {
             title="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div" color="#c94b10">
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              color="#c94b10"
+            >
               <ListItem disablePadding>
                 <ListItemButton
                   onClick={() => {
-                    navigate("/create-plan");
+                    navigate("/search-event");
                   }}
                 >
-                  <ListItemText primary="SEARCH EVENTS" sx={{ textAlign: "center" }} />
+                  <ListItemText
+                    primary="SEARCH EVENTS"
+                    sx={{ textAlign: "center" }}
+                  />
                 </ListItemButton>
               </ListItem>
             </Typography>
             <Typography variant="body2" color="#3c3b78">
-              Discover New And Upcoming Events All Over The World! 
+              Discover New And Upcoming Events All Over The World!
             </Typography>
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}>
@@ -128,14 +144,22 @@ export const Home = () => {
             title="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div" color="#c94b10">
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              color="#c94b10"
+            >
               <ListItem disablePadding>
                 <ListItemButton
                   onClick={() => {
-                    navigate("/create-plan");
+                    navigate("/plans");
                   }}
                 >
-                  <ListItemText primary="MY PLANS" sx={{ textAlign: "center" }} />
+                  <ListItemText
+                    primary="MY PLANS"
+                    sx={{ textAlign: "center" }}
+                  />
                 </ListItemButton>
               </ListItem>
             </Typography>
@@ -148,6 +172,6 @@ export const Home = () => {
           </CardActions>
         </Card>
       </Stack>
-    </Container >
+    </Container>
   );
 };

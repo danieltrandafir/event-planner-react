@@ -1,9 +1,10 @@
+import { Stack } from "@mui/system";
 import { PlanCard } from "../components/PlanCard";
 
 export const MyPlans = () => {
   return (
-    <div>
+    <Stack className="justify-content-between align-items-start">
       <PlanCard />
-    </div>
+    </Stack>
   );
 };

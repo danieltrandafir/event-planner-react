@@ -6,6 +6,11 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 export const PlanCard = () => {
+  let planInfoFromLS = localStorage.getItem("plans");
+  planInfoFromLS = JSON.parse(planInfoFromLS);
+
+  console.log(planInfoFromLS);
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -15,12 +20,10 @@ export const PlanCard = () => {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {planInfoFromLS[0].name} {planInfoFromLS[0].surname}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
+        <Typography variant="h5">{planInfoFromLS[0].email}</Typography>
+        <Typography variant="h5">{planInfoFromLS[0].location}</Typography>
       </CardContent>
       <CardActions>
         <Button size="small">Share</Button>

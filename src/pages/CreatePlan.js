@@ -16,11 +16,16 @@ export const CreatePlan = () => {
   }, []);
 
   const addPlan = (plan) => {
-    // const plansFromLS = getFromLocalStorage("plans", []);
-    // plansFromLS.push(plan);
-    localStorage.setItem("plans", JSON.stringify(plan));
-    // setPlans(plansFromLS);
+    let plansFromLS = getFromLocalStorage("plans", []);
+    console.log(plansFromLS);
     console.log(plan);
+
+    plansFromLS.push(plan);
+    // plansFromLS = [plan, ...plansFromLS];
+
+    localStorage.setItem("plans", JSON.stringify(plansFromLS));
+
+    setPlans(plansFromLS);
   };
 
   return (
