@@ -1,31 +1,25 @@
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { FormPlanner } from "../components/FormPlanner";
 import { PageTitle } from "../components/PageTitle";
 import { getFromLocalStorage } from "../utils/getFromLocalStorage";
 
 export const CreatePlan = () => {
-  const [plans, setPlans] = useState();
+  const [plans, setPlans] = useState(getFromLocalStorage("plans", []));
 
-  useEffect(() => {
-    const plansFromLS = getFromLocalStorage("plans", []);
-
-    setPlans(plansFromLS);
-  }, []);
+  // useEffect(() => {
+  //   const plansFromLS = getFromLocalStorage();
+  //   setPlans(plansFromLS);
+  // }, []);
 
   const addPlan = (plan) => {
-    let plansFromLS = getFromLocalStorage("plans", []);
-    console.log(plansFromLS);
-    console.log(plan);
-
-    plansFromLS.push(plan);
-    // plansFromLS = [plan, ...plansFromLS];
-
-    localStorage.setItem("plans", JSON.stringify(plansFromLS));
-
-    setPlans(plansFromLS);
+    // let plansFromLS = getFromLocalStorage("plans", []);
+    // plansFromLS.push(plan);
+    const newPlans = [plan, ...plans];
+    localStorage.setItem("plans", JSON.stringify(newPlans));
+    setPlans(newPlans);
   };
 
   return (
