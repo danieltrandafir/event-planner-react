@@ -6,19 +6,12 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Container, Stack } from "@mui/system";
 
-import { PageTitle } from "./PageTitle";
 
-export const PlanCard = () => {
-  let planInfoFromLS = localStorage.getItem("plans");
-  planInfoFromLS = JSON.parse(planInfoFromLS);
-
-  console.log(planInfoFromLS);
-
+export const PlanCard = ({ plan, setPlans }) => {
   return (
     <Container>
-      <PageTitle title={"See your plans!"} />
 
-      <Card sx={{ maxWidth: 345, boxShadow: "-3px 4px 6px 1px #000" }}>
+      <Card sx={{ maxWidth: '18rem', boxShadow: "-3px 4px 6px 1px #000" }}>
         <CardMedia
           sx={{ height: 140 }}
           image="../images/debby-hudson-vb0r4K_J1h8-unsplash.jpg"
@@ -26,13 +19,13 @@ export const PlanCard = () => {
         />
         <CardContent>
           <Stack textAlign={"center"}>
-            <Typography variant="h3">{planInfoFromLS[0].title}</Typography>
+            <Typography variant="h3">{plan.title}</Typography>
             <Typography gutterBottom variant="h5" component="div">
-              Organised by: {planInfoFromLS[0].name} {planInfoFromLS[0].surname}
+              Organised by: {plan.name}{' '}{plan.surname}
             </Typography>
-            <Typography variant="h5">{planInfoFromLS[0].email}</Typography>
+            <Typography variant="h5">{plan.email}</Typography>
             <Typography variant="h5">
-              Location: {planInfoFromLS[0].location}
+              Location: {plan.location}
             </Typography>
           </Stack>
         </CardContent>

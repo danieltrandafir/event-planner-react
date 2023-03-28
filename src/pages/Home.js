@@ -6,7 +6,6 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
-import { Routes, Route } from "react-router-dom";
 
 import { useNavigate } from "react-router-dom";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -17,7 +16,6 @@ import HomeBackground from "../images/crowd-of-people-orange.jpg";
 import CreateEventImage from "../images/2type-computer.jpg";
 import SearchEvents from "../images/close-up-recording-video-with-smartphone-during-concert.jpeg";
 import MyPlans from "../images/looking-at-phone.jpg";
-import { margin } from "@mui/system";
 
 const styles = {
   homeContainer: {
