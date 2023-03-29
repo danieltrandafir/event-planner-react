@@ -40,7 +40,7 @@ export const FormPlanner = ({ addPlan }) => {
     notes: Yup.string().max(200, "Minimum character count is 100."),
   });
 
-  const onSubmit = ({ name, surname, email, title, date, location, notes }) => {
+  const onSubmit = ({ name, surname, email, title, date, location, notes }, { resetForm }) => {
     const myPlan = {
       id: uuidv4(),
       name,
@@ -53,6 +53,8 @@ export const FormPlanner = ({ addPlan }) => {
     };
     // console.log(myPlan);
     addPlan(myPlan);
+
+    resetForm();
   };
 
   const formik = useFormik({
