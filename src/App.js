@@ -4,6 +4,8 @@ import { AppRoutes } from "./AppRoutes";
 
 import { NavBar } from "./components/NavBar";
 import { getFromLocalStorage } from "./utils/getFromLocalStorage"
+import { SearchProvider } from "./context/SearchProvider";
+
 
 export const App = () => {
   const [plans, setPlans] = useState(getFromLocalStorage("plans", []));
@@ -15,9 +17,11 @@ export const App = () => {
   }
 
   return (
-    <BrowserRouter>
-      <NavBar />
-      <AppRoutes plans={plans} setPlans={setPlans} addPlan={addPlan} />
-    </BrowserRouter>
+    <SearchProvider>
+      <BrowserRouter>
+        <NavBar />
+        <AppRoutes plans={plans} setPlans={setPlans} addPlan={addPlan} />
+      </BrowserRouter>
+    </SearchProvider>
   );
 };
