@@ -14,6 +14,21 @@ export const MyPlans = ({ plans, setPlans }) => {
   return (
     <Container sx={{ justifyContent: "space-evenly" }}>
       <PageTitle title={"See your plans!"} />
+      <ListItem
+        disablePadding
+        sx={{ width: "max-content", margin: "auto", marginBottom: "2rem" }}
+      >
+        <Button
+          onClick={() => {
+            navigate("/create-plan");
+          }}
+          sx={{ border: "1px solid black", margin: "auto" }}
+          variant="contained"
+        >
+          Create New Plan
+        </Button>
+      </ListItem>
+
       <Box
         gap={2}
         sx={{
@@ -32,18 +47,6 @@ export const MyPlans = ({ plans, setPlans }) => {
             What are you waiting for? Make some plans!
           </Alert>
         )}
-
-        <ListItem disablePadding sx={{ width: "max-content" }}>
-          <Button
-            onClick={() => {
-              navigate("/create-plan");
-            }}
-            sx={{ border: "1px solid black", margin: "auto" }}
-            variant="contained"
-          >
-            Create Plan
-          </Button>
-        </ListItem>
       </Box>
     </Container>
   );
