@@ -47,7 +47,7 @@ export const Home = () => {
             fontWeight: "600",
           }}
         >
-          Organize and Map Your Itineraries In Our Free Event-Planning App
+          Organise and Map Your Itineraries In Our Free Event-Planning App
         </Typography>
         <Typography
           pt={1}
