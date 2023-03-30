@@ -43,18 +43,18 @@ export const Home = () => {
           sx={{
             color: "#3c3b78",
             textAlign: "center",
-            fontSize: "3rem",
+            fontSize: "2rem",
             fontWeight: "600",
           }}
         >
-          Organise and Map Your Itineraries In Our Free Event-Planning App
+          Organize and Map Your Itineraries In Our Free Event-Planning App
         </Typography>
         <Typography
           pt={1}
           sx={{
             color: "#3c3b78",
             textAlign: "center",
-            fontSize: "2rem",
+            fontSize: "1.2rem",
             fontWeight: "600",
           }}
         >
