@@ -6,6 +6,8 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
+import MediaQuery from "react-responsive"
+
 
 import { useNavigate } from "react-router-dom";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -43,7 +45,7 @@ export const Home = () => {
           sx={{
             color: "#3c3b78",
             textAlign: "center",
-            fontSize: "3rem",
+            fontSize: "2rem",
             fontWeight: "600",
           }}
         >
@@ -54,7 +56,7 @@ export const Home = () => {
           sx={{
             color: "#3c3b78",
             textAlign: "center",
-            fontSize: "2rem",
+            fontSize: "1.2rem",
             fontWeight: "600",
           }}
         >
@@ -65,7 +67,7 @@ export const Home = () => {
         py={4}
         gap={10}
         direction={"row"}
-        sx={{ justifyContent: "center" }}
+        sx={{ justifyContent: "center"}}
       >
         <Card sx={{ maxWidth: 250, textAlign: "center" }}>
           <CardMedia
@@ -98,7 +100,6 @@ export const Home = () => {
             </Typography>
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}>
-            <Button size="small">Create your plan</Button>
           </CardActions>
         </Card>
         <Card sx={{ maxWidth: 250, textAlign: "center" }}>
@@ -132,7 +133,6 @@ export const Home = () => {
             </Typography>
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}>
-            <Button size="small">Discover new events</Button>
           </CardActions>
         </Card>
         <Card sx={{ maxWidth: 250, textAlign: "center" }}>
@@ -166,7 +166,6 @@ export const Home = () => {
             </Typography>
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}>
-            <Button size="small">Saved plans</Button>
           </CardActions>
         </Card>
       </Stack>
