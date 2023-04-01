@@ -4,43 +4,58 @@ import Container from "@mui/material/Container";
 import Alert from "@mui/material/Alert";
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
+import axios from "axios";
 
 import { SearchForm } from "../components/SearchForm";
-import { useState } from "react";
-import { useFetch } from "../CustomHooks/useFetch";
+import { useEffect, useState } from "react";
+import { SearchResults } from "../components/SearchResults";
 
 export const SearchEvent = () => {
-  const [search, setSearch] = useState("London");
-  const [searchForAPI, setSearchForAPI] = useState(search);
+  const [searchTerm, setSearchTerm] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [results, setResults] = useState();
 
-  const BASE_URL = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=2gtAGET8BPKkawzuckK9nLysRn93EEAC&size=50&countryCode=GB&keyword=${searchForAPI}`;
 
-  // `"https://app.ticketmaster.com/discovery/v2/events.json?apikey=2gtAGET8BPKkawzuckK9nLysRn93EEAC&size=100",
-  // {
-  //   params: {
-  //     apikey: process.env.REACT_APP_TICKETMASTER_API_KEY,
-  //     countryCode: "GB",
-  //     keyword: ${searchForAPI},
-  //   },
-  // }`
+  useEffect(() => {
+    if (searchTerm) {
+      const fetchData = async () => {
+        setIsLoading(true);
 
-  const { data, isLoading, error } = useFetch(BASE_URL);
+        try {
+          setError(false);
+          const { data } = await axios.get(
+            "https://app.ticketmaster.com/discovery/v2/events.json?apikey=2gtAGET8BPKkawzuckK9nLysRn93EEAC&size=100",
+            {
+              params: { apikey: process.env.REACT_APP_TICKETMASTER_API_KEY, countryCode: "GB", keyword: searchTerm },
+            }
+          );
+          const finalData = data._embedded.events;
+          console.log(finalData)
+          setResults(finalData)
 
-  const handleQuery = (e) => {
-    e.preventDefault();
-    setSearchForAPI(search);
-    console.log(search);
+        } catch (error) {
+          console.log(`[ERROR]: Failed to fetch data | ${error.message}`);
+
+          setError(true);
+        }
+
+        setIsLoading(false);
+      };
+
+      fetchData();
+    }
+  }, [searchTerm]);
+
+  const handleQuery = (query) => {
+    setSearchTerm(query);
   };
 
   return (
     <Container maxWidth="lg">
       <Stack>
         <Box>
-          <SearchForm
-            handleQuery={handleQuery}
-            search={search}
-            setSearch={setSearch}
-          />
+          <SearchForm handleQuery={handleQuery} />
         </Box>
         <Box>
           {isLoading && (
@@ -49,8 +64,11 @@ export const SearchEvent = () => {
             </Backdrop>
           )}
           {error && (
-            <Alert severity="error">Failed to fetch results for {data}</Alert>
+            <Alert severity="error">
+              Failed to fetch results for {searchTerm}
+            </Alert>
           )}
+          {results && <SearchResults results={results} />}
         </Box>
       </Stack>
     </Container>
