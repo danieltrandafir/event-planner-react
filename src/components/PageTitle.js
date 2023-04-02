@@ -6,7 +6,7 @@ export const PageTitle = ({ title }) => {
     <Box>
       <Typography
         fontFamily={"Merriweather, serif"}
-        sx={{ textAlign: "center", margin: " 50px", fontWeight: 700 }}
+        sx={{ textAlign: "center", margin: " 50px", fontWeight: 700, color: "#3c3b78" }}
         variant="h3"
         component={"h1"}
       >

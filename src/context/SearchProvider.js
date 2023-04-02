@@ -6,9 +6,10 @@ const SearchContext = createContext();
 
 export const SearchProvider = ({ children }) => {
     const [items, setItems] = useState(getFromLocalStorage("plans", []));
+    const [results, setResults] = useState(getFromLocalStorage("eventList", []));
 
 
-    const value = { items, setItems };
+    const value = { items, setItems, results, setResults };
 
     return (
         <SearchContext.Provider value={value}>{children}</SearchContext.Provider>
