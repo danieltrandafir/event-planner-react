@@ -14,7 +14,7 @@ export const CreatePlan = ({ plans, setPlans, addPlan }) => {
         marginBottom: "2rem",
       }}
     >
-      <Stack>
+      <Stack maxWidth="sm" margin={"auto"}>
         <PageTitle title={"Make Your Plan!"} />
         <FormPlanner addPlan={addPlan} />
       </Stack>

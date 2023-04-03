@@ -29,12 +29,12 @@ export const FormPlanner = ({ addPlan }) => {
   };
 
   const validationSchema = Yup.object({
-    name: Yup.string().required("Please enter a valid product"),
+    name: Yup.string().required("Please enter your name"),
     surname: Yup.string().required("Please enter your surname."),
     email: Yup.string()
       .required("Please enter an email address.")
       .email("Please enter a valid email address."),
-    title: Yup.string().required("Please name you plan"),
+    title: Yup.string().required("Please name your plan"),
     date: Yup.date(),
     location: Yup.string().required("Please enter a location."),
     notes: Yup.string().max(200, "Minimum character count is 100."),
@@ -82,7 +82,7 @@ export const FormPlanner = ({ addPlan }) => {
         <TextField
           label="Name"
           name="name"
-          placeholder="Enter product name"
+          placeholder="Enter your name"
           fullWidth
           value={formik.values.name}
           error={!!formik.errors.name}
@@ -153,7 +153,11 @@ export const FormPlanner = ({ addPlan }) => {
           onChange={formik.handleChange}
         />
         <Button
-          sx={{ marginBottom: "30px" }}
+          sx={{
+            marginBottom: "30px",
+            backgroundColor: "#3c3b78",
+            "&:hover": { backgroundColor: "#ed6d42" },
+          }}
           variant="contained"
           endIcon={<SendIcon />}
           type="submit"
