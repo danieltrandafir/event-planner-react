@@ -40,7 +40,10 @@ export const FormPlanner = ({ addPlan }) => {
     notes: Yup.string().max(200, "Minimum character count is 100."),
   });
 
-  const onSubmit = ({ name, surname, email, title, date, location, notes }, { resetForm }) => {
+  const onSubmit = (
+    { name, surname, email, title, date, location, notes },
+    { resetForm }
+  ) => {
     const myPlan = {
       id: uuidv4(),
       name,
@@ -71,6 +74,8 @@ export const FormPlanner = ({ addPlan }) => {
       onSubmit={formik.handleSubmit}
     >
       <Stack gap={2}>
+        {/* ------------------------Plan Organiser----------------------- */}
+
         <Typography textAlign={"center"} variant="h4">
           Organizer
         </Typography>
@@ -102,15 +107,13 @@ export const FormPlanner = ({ addPlan }) => {
           helperText={formik.errors.email}
           onChange={formik.handleChange}
         />
-
-        {/* <Divider sx={{ margin: "10px" }} /> */}
-
+        {/* -----------------------Plan Details----------------------- */}
         <Typography textAlign={"center"} variant="h4">
           Plan details
         </Typography>
 
         <TextField
-          label="Title"
+          label="Plan name"
           name="title"
           placeholder="Enter plan name"
           value={formik.values.title}
@@ -126,7 +129,7 @@ export const FormPlanner = ({ addPlan }) => {
               // value={formik.values.date}
               error={!!formik.errors.date}
               helperText={formik.errors.date}
-            // onChange={formik.handleChange}
+              // onChange={formik.handleChange}
             />
           </DemoContainer>
         </LocalizationProvider>
