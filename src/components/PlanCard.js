@@ -5,6 +5,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
+import MyPlan from "../images/3d-render-calendar-data-checklist-with-pencil.jpeg";
+
 
 import { getFromLocalStorage } from "../utils/getFromLocalStorage";
 
@@ -21,13 +23,14 @@ export const PlanCard = ({ plans, setPlans }) => {
     setPlans(newList);
   };
 
+  console.log(plans.toto)
   return (
     <Card
-      sx={{ mt: "1rem", minWidth: "16rem", boxShadow: "-3px 4px 6px 1px #000" }}
+      sx={{ m: "1", minWidth: "18rem" }}
     >
       <CardMedia
-        sx={{ height: 140 }}
-        image="../images/debby-hudson-vb0r4K_J1h8-unsplash.jpg"
+        sx={{ height: "140px" }}
+        image={MyPlan}
         title="tbc"
       />
       <CardContent>
@@ -37,21 +40,24 @@ export const PlanCard = ({ plans, setPlans }) => {
             Organised by: {plans.name} {plans.surname}
           </Typography>
           <Typography variant="subtitle1">{plans.email}</Typography>
+          <Typography>{plans.date}</Typography>
           <Typography variant="subtitle1">
             Location: {plans.location}
           </Typography>
         </Stack>
       </CardContent>
-      <CardActions sx={{ justifyContent: "center" }}>
+      <CardActions sx={{ justifyContent: "center", gap: ".5rem" }}>
         <Button
           size="small"
           variant="contained"
           color="error"
           onClick={handleRemovePlan}
+          sx={{ backgroundColor: "#ed6d42", "&:hover": { backgroundColor: "#3c3b78" }, width: "6rem" }}
         >
           Remove
         </Button>
-        <Button size="small" variant="contained" color="primary">
+        <Button size="small" variant="contained" color="primary" sx={{ backgroundColor: "#3c3b78", "&:hover": { backgroundColor: "#ed6d42" }, width: "6rem" }}
+        >
           View Plan
         </Button>
       </CardActions>

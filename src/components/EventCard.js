@@ -26,9 +26,9 @@ export const EventCard = ({ result, mode }) => {
   };
 
   return (
-    <Card sx={{ width: "18rem", m: 1 }}>
+    <Card sx={{ width: "18rem", m: "1rem", justifyContent: "space-evenly" }}>
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: "140px" }}
         image={result.images[5].url}
         title='test'
       />
@@ -50,11 +50,12 @@ export const EventCard = ({ result, mode }) => {
         </Typography>
 
       </CardContent>
-      <Box sx={{ textAlign: 'center', justifyContent: "space-evenly", gap: "2rem", alignItems: "center", color: "#3c3b78" }}>
-        <Link underline="none" sx={{ typography: 'body1' }} href={result.url}>READ MORE</Link>
-        <Button sx={{ typography: 'body1' }} onClick={handleAddToPlan}>ADD TO PLAN</Button>
-      </Box>
-
+      <CardActions sx={{ justifyContent: "space-evenly", gap: "15rem" }}>
+        <Box sx={{ textAlign: 'center', justifyContent: "space-evenly", gap: "2rem", alignItems: "center", color: "#3c3b78" }}>
+          <Button size="small" variant="contained" sx={{ backgroundColor: "#ed6d42", marginRight: ".5rem", "&:hover": { backgroundColor: "#3c3b78" } }} href={result.url}>READ MORE</Button>
+          <Button size="small" variant="contained" sx={{ marginLeft: ".5rem", backgroundColor: "#3c3b78", "&:hover": { backgroundColor: "#ed6d42" } }} onClick={handleAddToPlan}>ADD TO PLAN</Button>
+        </Box>
+      </CardActions>
     </Card>
   );
 };
