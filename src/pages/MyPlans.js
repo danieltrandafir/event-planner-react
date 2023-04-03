@@ -12,8 +12,6 @@ import { useEffect, useState } from "react";
 import { SearchResults } from "../components/SearchResults"
 import { getFromLocalStorage } from "../utils/getFromLocalStorage";
 
-
-
 export const MyPlans = ({ plans, setPlans }) => {
   const { results, setResults } = useSearch();
   const { onHover, setOnHover } = useState();

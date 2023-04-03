@@ -14,6 +14,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { Typography } from "@mui/material";
+import "./style.css"
 
 export const NavBar = () => {
   const navigate = useNavigate();
@@ -147,7 +148,7 @@ export const NavBar = () => {
               Home
             </Button>
 
-            <Button
+            <Button class="navButtons"
               sx={{ my: 2, color: "white", display: "block" }}
               onClick={() => {
                 navigate("/create-plan");
@@ -156,7 +157,7 @@ export const NavBar = () => {
               Create Plan
             </Button>
 
-            <Button
+            <Button class="navButtons"
               sx={{ my: 2, color: "white", display: "block" }}
               onClick={() => {
                 navigate("/search-event");
@@ -165,7 +166,7 @@ export const NavBar = () => {
               Search Event
             </Button>
 
-            <Button
+            <Button class="navButtons"
               sx={{ my: 2, color: "white", display: "block" }}
               onClick={() => {
                 navigate("/plans");

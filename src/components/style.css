@@ -1,0 +1,14 @@
+.navButtons:hover {
+    background-color: #ed6d42; 
+
+}
+
+.navButtons { 
+    display: block; 
+    background-color: #3c3b78;
+    height: 3rem; 
+    border-radius: 8px;
+    color: white; 
+    width: 7rem; 
+}
+
