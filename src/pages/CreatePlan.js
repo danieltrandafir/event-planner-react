@@ -8,7 +8,7 @@ export const CreatePlan = ({ plans, setPlans, addPlan }) => {
   return (
     <Container
       sx={{
-        backgroundColor: "lightGray",
+        backgroundColor: "#fff",
         padding: "0.01rem 0 3rem 0",
         marginTop: "2rem",
         marginBottom: "2rem",
