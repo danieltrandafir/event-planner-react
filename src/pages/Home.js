@@ -7,7 +7,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 // import MediaQuery from "react-responsive"
-import "../components/style.css"
+import "../components/style.css";
 
 import { useNavigate } from "react-router-dom";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -38,9 +38,13 @@ export const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <Container style={styles.homeContainer} sx={{ maxWidth: 250, textAlign: "center" }}>
+    <Container
+      style={styles.homeContainer}
+      sx={{ maxWidth: 250, textAlign: "center" }}
+    >
       <Box style={styles.banner}>
-        <Typography id="title1"
+        <Typography
+          id="title1"
           pt={1}
           sx={{
             color: "#3c3b78",
@@ -51,7 +55,8 @@ export const Home = () => {
         >
           Organise and Map Your Itineraries In Our Free Event-Planning App
         </Typography>
-        <Typography id="title2"
+        <Typography
+          id="title2"
           pt={1}
           sx={{
             color: "#3c3b78",
@@ -63,7 +68,8 @@ export const Home = () => {
           Want to explore something new? Discover new events below
         </Typography>
       </Box>
-      <Stack id="cards"
+      <Stack
+        id="cards"
         py={4}
         gap={10}
         direction={"row"}
@@ -73,7 +79,7 @@ export const Home = () => {
           <CardMedia
             sx={{ height: 140 }}
             image={CreateEventImage}
-            title="green iguana"
+            title="person typing at laptop"
           />
           <CardContent>
             <Typography
@@ -99,14 +105,13 @@ export const Home = () => {
               Create Your Own Itinerary And Share With Other Attendees
             </Typography>
           </CardContent>
-          <CardActions sx={{ justifyContent: "center" }}>
-          </CardActions>
+          <CardActions sx={{ justifyContent: "center" }}></CardActions>
         </Card>
         <Card sx={{ maxWidth: 250, textAlign: "center" }}>
           <CardMedia
             sx={{ height: 140 }}
             image={SearchEvents}
-            title="green iguana"
+            title="crowd at event"
           />
           <CardContent>
             <Typography
@@ -132,14 +137,13 @@ export const Home = () => {
               Discover New And Upcoming Events All Over The World!
             </Typography>
           </CardContent>
-          <CardActions sx={{ justifyContent: "center" }}>
-          </CardActions>
+          <CardActions sx={{ justifyContent: "center" }}></CardActions>
         </Card>
         <Card sx={{ maxWidth: 250, textAlign: "center" }}>
           <CardMedia
             sx={{ height: 140 }}
             image={MyPlans}
-            title="green iguana"
+            title=" person checking their phone"
           />
           <CardContent>
             <Typography
@@ -165,8 +169,7 @@ export const Home = () => {
               Keep, Review, and Manage Your Plans
             </Typography>
           </CardContent>
-          <CardActions sx={{ justifyContent: "center" }}>
-          </CardActions>
+          <CardActions sx={{ justifyContent: "center" }}></CardActions>
         </Card>
       </Stack>
     </Container>
