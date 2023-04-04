@@ -7,7 +7,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 // import MediaQuery from "react-responsive"
-
+import "../components/style.css"
 
 import { useNavigate } from "react-router-dom";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -40,7 +40,7 @@ export const Home = () => {
   return (
     <Container style={styles.homeContainer} sx={{ maxWidth: 250, textAlign: "center" }}>
       <Box style={styles.banner}>
-        <Typography
+        <Typography id="title1"
           pt={1}
           sx={{
             color: "#3c3b78",
@@ -51,7 +51,7 @@ export const Home = () => {
         >
           Organise and Map Your Itineraries In Our Free Event-Planning App
         </Typography>
-        <Typography
+        <Typography id="title2"
           pt={1}
           sx={{
             color: "#3c3b78",
@@ -63,7 +63,7 @@ export const Home = () => {
           Want to explore something new? Discover new events below
         </Typography>
       </Box>
-      <Stack
+      <Stack id="cards"
         py={4}
         gap={10}
         direction={"row"}
