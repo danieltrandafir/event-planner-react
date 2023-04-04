@@ -88,7 +88,7 @@ export const Home = () => {
               component="div"
               color="#c94b10"
             >
-              <ListItem disablePadding>
+              <ListItem className="listItem" disablePadding>
                 <ListItemButton
                   onClick={() => {
                     navigate("/create-plan");
@@ -120,7 +120,7 @@ export const Home = () => {
               component="div"
               color="#c94b10"
             >
-              <ListItem disablePadding>
+              <ListItem className="listItem" disablePadding>
                 <ListItemButton
                   onClick={() => {
                     navigate("/search-event");
@@ -152,7 +152,7 @@ export const Home = () => {
               component="div"
               color="#c94b10"
             >
-              <ListItem disablePadding>
+              <ListItem className="listItem" disablePadding>
                 <ListItemButton
                   onClick={() => {
                     navigate("/plans");

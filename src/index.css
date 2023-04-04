@@ -6,3 +6,22 @@ body {
 /* .MuiTextField-root {
   background: #f9faf4;
 } */
+
+.listItem {
+  color: #fff;
+  border-radius: 8px;
+  background-color: #3c3b78;
+  background-image: #3c3b78;
+  background-image: -moz-linear-gradient(top, #96b9eb 0%, #3c3b78 100%);
+  background-image: -webkit-linear-gradient(top, #96b9eb 0%, #3c3b78 100%);
+  background-image: linear-gradient(to bottom, #96b9eb 0%, #3c3b78 100%);
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+.listItem:hover {
+  background-position: -300%;
+  transition: background 300ms ease-in-out;
+}
