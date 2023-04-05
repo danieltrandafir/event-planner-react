@@ -5,17 +5,20 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
-import Link from "@mui/material/Link";
+import Link from '@mui/material/Link';
 import { useSearch } from "../context/SearchProvider";
 import { getFromLocalStorage } from "../utils/getFromLocalStorage";
+import { useState } from "react";
+
 
 export const EventCard = ({ result, mode }) => {
   const { items, setItems, setResults } = useSearch();
-
   const handleAddToPlan = () => {
     const planListFromLS = getFromLocalStorage("eventList", []);
 
     const isPresent = planListFromLS.find((each) => each.id === result.id);
+    console.log(isPresent)
+    console.log(result.id)
 
     if (!isPresent) {
       planListFromLS.push(result);
@@ -41,6 +44,7 @@ export const EventCard = ({ result, mode }) => {
         <Typography variant="body2" color="text.secondary">
           Event date: {result.dates.start.localDate}
         </Typography>
+
         <Typography variant="body2" color="text.secondary">
           Starts @ {result.dates.start.localTime}
         </Typography>
@@ -48,11 +52,11 @@ export const EventCard = ({ result, mode }) => {
         <Typography variant="body2" color="text.secondary">
           Venue: {result._embedded.venues[0].name},{" "}
         </Typography>
-
         <Typography variant="body2" color="text.secondary">
           Address: {result._embedded.venues[0].address.line1},{" "}
           {result._embedded.venues[0].postalCode}
         </Typography>
+
       </CardContent>
       <CardActions sx={{ justifyContent: "space-evenly", gap: "15rem" }}>
         <Box
