@@ -68,6 +68,7 @@ export const SearchEvent = () => {
               Failed to fetch results for {searchTerm}
             </Alert>
           )}
+          {/* Card Container */}
           {results && <SearchResults results={results} />}
         </Box>
       </Stack>
