@@ -35,7 +35,7 @@ export const EventCard = ({ result, mode }) => {
         title="event image"
       />
       <CardContent
-        sx={{ minHeight: 150, fontSize: "1.5rem", textAlign: "center" }}
+        sx={{ minHeight: 175, fontSize: "1.5rem", textAlign: "center" }}
       >
         <Typography gutterBottom variant="h5" component="div">
           {result.name}
