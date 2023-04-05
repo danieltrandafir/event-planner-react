@@ -133,7 +133,7 @@ export const NavBar = () => {
               justifyContent: "space-evenly",
             }}
           >
-            <Button
+            <Button id="homeButton"
               variant="contained"
               sx={{
                 padding: "0 40px",

@@ -1,6 +1,11 @@
 .navButtons:hover {
     background-color: #ed6d42; 
+    cursor: grab;
 
+}
+
+#homeButton:hover { 
+    cursor: grab
 }
 
 .navButtons { 
