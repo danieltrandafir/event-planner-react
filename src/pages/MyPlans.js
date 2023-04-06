@@ -6,7 +6,7 @@ import ListItem from "@mui/material/ListItem";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import { useSearch } from "../context/SearchProvider";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { SearchResults } from "../components/SearchResults";
 import { getFromLocalStorage } from "../utils/getFromLocalStorage";
 

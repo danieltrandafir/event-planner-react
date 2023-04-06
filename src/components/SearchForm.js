@@ -6,6 +6,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 
+// search event input field
 export const SearchForm = ({ handleQuery }) => {
   const initialValues = {
     query: "",
@@ -16,7 +17,7 @@ export const SearchForm = ({ handleQuery }) => {
   });
 
   const onSubmit = ({ query }) => {
-    console.log(query)
+    console.log(query);
     handleQuery(query);
   };
 

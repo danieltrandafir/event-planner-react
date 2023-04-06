@@ -10,6 +10,7 @@ import MyPlan from "../images/3d-render-calendar-data-checklist-with-pencil.jpeg
 
 import { getFromLocalStorage } from "../utils/getFromLocalStorage";
 
+// remove and update plans in local storage
 export const PlanCard = ({ plans, setPlans }) => {
   // remove plans from MyPlans page
   const handleRemovePlan = () => {
@@ -23,7 +24,6 @@ export const PlanCard = ({ plans, setPlans }) => {
     setPlans(newList);
   };
 
-  console.log(plans.toto)
   return (
     <Card
       sx={{ m: "1", minWidth: "18rem" }}

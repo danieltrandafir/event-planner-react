@@ -19,6 +19,7 @@ import CreateEventImage from "../images/2type-computer.jpg";
 import SearchEvents from "../images/close-up-recording-video-with-smartphone-during-concert.jpeg";
 import MyPlans from "../images/looking-at-phone.jpg";
 
+// custom styling
 const styles = {
   homeContainer: {
     backgroundImage: `url(${HomeBackground})`,
@@ -92,6 +93,7 @@ export const Home = () => {
               color="#c94b10"
             >
               <ListItem className="listItem" disablePadding>
+                {/* onclick navigate link */}
                 <ListItemButton
                   onClick={() => {
                     navigate("/create-plan");

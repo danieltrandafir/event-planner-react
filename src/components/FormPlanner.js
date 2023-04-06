@@ -14,20 +14,22 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { Typography } from "@mui/material";
 
+// form for the user to create a plan
 export const FormPlanner = ({ addPlan }) => {
   const [value, setValue] = React.useState(null);
-
+  // Formik set up
   const initialValues = {
+    // Plan details initial values
     name: "",
     surname: "",
     email: "",
-    // Plan details initial values
     title: "",
     date: "",
     location: "",
     notes: "",
   };
 
+  // error handling
   const validationSchema = Yup.object({
     name: Yup.string().required("Please enter your name"),
     surname: Yup.string().required("Please enter your surname."),
@@ -54,9 +56,9 @@ export const FormPlanner = ({ addPlan }) => {
       location,
       notes,
     };
-    // console.log(myPlan);
+    // use addPlan prop to add form input to LS
     addPlan(myPlan);
-
+    // reset form on submit
     resetForm();
   };
 
