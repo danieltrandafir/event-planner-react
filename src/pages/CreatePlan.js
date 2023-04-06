@@ -4,7 +4,7 @@ import Stack from "@mui/material/Stack";
 import { FormPlanner } from "../components/FormPlanner";
 import { PageTitle } from "../components/PageTitle";
 
-export const CreatePlan = ({ plans, setPlans, addPlan }) => {
+export const CreatePlan = ({ addPlan }) => {
   return (
     <Container
       sx={{

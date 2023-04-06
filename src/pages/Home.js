@@ -5,15 +5,15 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-// import MediaQuery from "react-responsive"
-import "../components/style.css";
-
-import { useNavigate } from "react-router-dom";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import ListItem from "@mui/material/ListItem";
 
+import "../components/style.css";
+
+import { useNavigate } from "react-router-dom";
+
+// Images
 import HomeBackground from "../images/crowd-of-people-orange.jpg";
 import CreateEventImage from "../images/2type-computer.jpg";
 import SearchEvents from "../images/close-up-recording-video-with-smartphone-during-concert.jpeg";
@@ -21,7 +21,7 @@ import MyPlans from "../images/looking-at-phone.jpg";
 
 const styles = {
   homeContainer: {
-    backgroundImage: `url(${HomeBackground}), cover, center`,
+    backgroundImage: `url(${HomeBackground})`,
     backgroundSize: "cover",
     height: "100vh",
     margin: 0,
