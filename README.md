@@ -28,4 +28,4 @@ List the ready features here:
 
 ## Screenshots
 
-![Website View]()
+![Website View](./src/images/mad-macro-mockup copy.jpg)

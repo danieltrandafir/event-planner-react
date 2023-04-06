@@ -21,9 +21,9 @@ import MyPlans from "../images/looking-at-phone.jpg";
 
 const styles = {
   homeContainer: {
-    backgroundImage: `url(${HomeBackground})`,
+    backgroundImage: `url(${HomeBackground}), cover, center`,
     backgroundSize: "cover",
-    height: "100%vh",
+    height: "100vh",
     margin: 0,
     paddingTop: "50px",
     maxWidth: "100%",
@@ -43,6 +43,7 @@ export const Home = () => {
       sx={{ maxWidth: 250, textAlign: "center" }}
     >
       <Box style={styles.banner}>
+        {/* HEADER SECTION */}
         <Typography
           id="title1"
           pt={1}
@@ -67,6 +68,7 @@ export const Home = () => {
         >
           Want to explore something new? Discover new events below
         </Typography>
+        {/* ---------------------------- */}
       </Box>
       <Stack
         id="cards"
@@ -75,6 +77,7 @@ export const Home = () => {
         direction={"row"}
         sx={{ justifyContent: "center" }}
       >
+        {/* FIRST CARD  Create Plan */}
         <Card sx={{ maxWidth: 250, textAlign: "center" }}>
           <CardMedia
             sx={{ height: 140 }}
@@ -107,6 +110,7 @@ export const Home = () => {
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}></CardActions>
         </Card>
+        {/* SECOND CARD Search Event */}
         <Card sx={{ maxWidth: 250, textAlign: "center" }}>
           <CardMedia
             sx={{ height: 140 }}
@@ -139,6 +143,7 @@ export const Home = () => {
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}></CardActions>
         </Card>
+        {/* THIRD CARD Search Event */}
         <Card sx={{ maxWidth: 250, textAlign: "center" }}>
           <CardMedia
             sx={{ height: 140 }}
