@@ -11,7 +11,7 @@
 
 ## General Information
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book..
+We have created a simple resource for anyone looking keep track of upcoming events that they will be attending. The app can also be used to search for, and track upcoming events all over the world, and add to the user's 'My Plans' space.  
 
 ## Technologies Used
 
@@ -19,13 +19,16 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 -React JS
 -MUI
 -FORMIK
+-TicketMaster API 
 
 ## Features
 
 List the ready features here:
--User is able to search for food names and display macronutrient information, and food photo
--User is alerted if the food does not exist on the database or if food name is entered incorrectly
+-User is able to search for upcoming events in any location on earth 
+-User is able to independantly create multiple events of their own 
+-User is able to store the data on both the events that they have created, and those that they have searched for 
 
 ## Screenshots
 
-![Website View](./src/images/mad-macro-mockup copy.jpg)
+![Website View](./src/images/Screenshot1)
+![Phone View] (.src/images/Screenshot2)
